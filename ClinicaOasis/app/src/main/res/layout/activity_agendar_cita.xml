@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:padding="16dp">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Agendar Cita"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Día seleccionado -->
+    <TextView
+        android:id="@+id/txtDiaSeleccionado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Día seleccionado:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_black"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Card Doctor -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDoctor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/txtDiaSeleccionado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona Doctor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_black"/>
+
+            <Spinner
+                android:id="@+id/spinnerDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_light"
+                android:textColor="@color/text_black"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Card Consultorio -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardConsultorio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/cardDoctor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona Consultorio"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_black"/>
+
+            <Spinner
+                android:id="@+id/spinnerConsultorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_light"
+                android:textColor="@color/text_black"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Card Horario -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardHorario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/cardConsultorio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona Horario"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_black"/>
+
+            <Spinner
+                android:id="@+id/spinnerHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_light"
+                android:textColor="@color/text_black"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Checkbox correo -->
+    <CheckBox
+        android:id="@+id/checkboxNotificarCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recibir notificación por correo"
+        android:textColor="@color/text_black"
+        app:layout_constraintTop_toBottomOf="@id/cardHorario"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- EditText correo -->
+    <EditText
+        android:id="@+id/editTextCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/edit_text"
+        android:visibility="gone"
+        android:textColor="@color/text_black"
+        android:textColorHint="@color/hint_gray"
+        app:layout_constraintTop_toBottomOf="@id/checkboxNotificarCorreo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botón Confirmar -->
+    <Button
+        android:id="@+id/btnConfirmarCita"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Cita"
+        android:textStyle="bold"
+        android:backgroundTint="@color/accent_blue"
+        android:textColor="@color/button_text_inverted"
+        app:layout_constraintTop_toBottomOf="@id/editTextCorreo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Resumen cita -->
+    <TextView
+        android:id="@+id/txtResumenCita"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Aquí se mostrará el resumen de la cita"
+        android:textColor="@color/text_black"
+        android:padding="12dp"
+        android:background="@color/gray_light"
+        app:layout_constraintTop_toBottomOf="@id/btnConfirmarCita"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

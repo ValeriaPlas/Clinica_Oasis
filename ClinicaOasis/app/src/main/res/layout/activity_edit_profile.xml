@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="24dp"
+        android:background="@drawable/card_background"
+        android:elevation="8dp"
+        android:layout_margin="16dp">
+
+        <!-- VALIDACIÓN DE USUARIO -->
+        <LinearLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/currentUsernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa tu usuario"
+                android:inputType="text"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/currentPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña actual"
+                android:inputType="textPassword"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/showLoginPasswordCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar contraseña"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/validateUserButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Validar"
+                android:backgroundTint="@color/icon_gray"
+                android:textColor="@color/button_text_inverted"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp" />
+        </LinearLayout>
+
+        <!-- CAMBIO DE DATOS -->
+        <LinearLayout
+            android:id="@+id/userUpdateLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/perfil_default"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_gray"
+                android:padding="4dp" />
+
+            <Button
+                android:id="@+id/changeImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambiar Imagen"
+                android:backgroundTint="@color/icon_gray"
+                android:textColor="@color/button_text_inverted"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp">
+
+                <LinearLayout
+                    android:id="@+id/imageSelectionlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:gravity="center">
+
+                    <!-- Miniaturas -->
+                    <ImageView
+                        android:id="@+id/imageOption1"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil1"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption2"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil2"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption3"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil3"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption4"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil4"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption5"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil5"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption6"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil6"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption7"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil7"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption8"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil8"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption9"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil9"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption10"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil10"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imageOption11"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/perfil11"
+                        android:background="@drawable/circle_gray"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <EditText
+                android:id="@+id/newPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nueva contraseña"
+                android:inputType="textPassword"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/confirmPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirmar contraseña"
+                android:inputType="textPassword"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/showPasswordCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar contraseña"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar Cambios"
+                android:backgroundTint="@color/accent_blue"
+                android:textColor="@color/button_text_inverted"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

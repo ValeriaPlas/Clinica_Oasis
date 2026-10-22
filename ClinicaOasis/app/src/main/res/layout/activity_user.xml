@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Cabecera de perfil -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background_dos"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/perfil3"
+            android:background="@drawable/card_background_dos"
+            android:padding="4dp"
+            android:elevation="2dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola, Usuario"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:background="@drawable/card_background_dos"
+        android:padding="12dp"
+        android:elevation="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="👤 Editar perfil"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/card_background_tres" />
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="ℹ️ Acerca de"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/card_background_tres" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="🚪 Cerrar sesión"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:background="@drawable/card_background_tres" />
+    </LinearLayout>
+
+
+    <!-- Botón principal de "Seleccionar act" -->
+    <Button
+        android:id="@+id/btnSelectAct"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="#FFC107"
+        android:text="Selecciona Actividad"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <!-- Botones de actividades (solo visibles cuando se presiona "Seleccionar act") -->
+    <Button
+        android:id="@+id/btnDatosMedicos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Datos Medicos"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/icon_gray" />
+
+
+    <Button
+        android:id="@+id/btnCita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agendar Cita"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btnComunicados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comunicados"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btnHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Historial de Consultas"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@android:color/holo_blue_dark" />
+</LinearLayout>

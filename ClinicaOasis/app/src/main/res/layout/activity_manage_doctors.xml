@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Nombre del doctor -->
+    <EditText
+        android:id="@+id/edtDoctorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del doctor" />
+
+    <!-- Consultorio -->
+    <EditText
+        android:id="@+id/edtConsultorio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Consultorio"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Horarios -->
+    <EditText
+        android:id="@+id/edtHorarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Horarios (separados por coma)"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Días de trabajo -->
+    <EditText
+        android:id="@+id/edtDias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Días (separados por coma)"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Botón Agregar -->
+    <Button
+        android:id="@+id/btnAddDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Doctor"
+        android:layout_marginTop="10dp" />
+
+    <!-- Lista de doctores -->
+    <ListView
+        android:id="@+id/listDoctors"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

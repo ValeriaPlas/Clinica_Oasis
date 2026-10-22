@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="@android:color/white"
+    android:elevation="4dp"
+    android:radius="12dp">
+
+    <TextView
+        android:id="@+id/textHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Ejemplo de historial"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+</com.google.android.material.card.MaterialCardView>
